@@ -55,7 +55,7 @@ $courses = array(
 			<?php 
 			endforeach; 
 			if(count($folders) == 0): ?>
-				<p>Här var det tomt. Andreas har förmodligen inte börjat på den här kursen än. Kom tillbaka lite senare! ;)</p>
+				<p>Här var det tomt. <?php echo $acronym; ?> har förmodligen inte börjat på den här kursen än. Kom tillbaka lite senare! ;)</p>
 			<?php endif;
 		endforeach; 
 		?>
