@@ -1,9 +1,9 @@
 <?php
 
 /**
- * @author 		Andreas Jönsson <adde90@gmail.com>
- * @version 	0.1 
- * @since 		2013-10-19
+ * @author 	Andreas Jönsson <adde90@gmail.com>
+ * @version	0.1 
+ * @since 	2013-10-19
  */
 
 class FileManager 
