@@ -2,6 +2,9 @@
 header("X-UA-Compatible: IE=edge,chrome=1");
 require 'src/file-manager.php';
 
+// Definierar akronym (används i titel och rubrik)
+$acronym = 'anjh13';
+
 // Definierar kurserna
 $courses = array(
 	'htmlphp' => array(
@@ -27,8 +30,8 @@ $courses = array(
 <html lang="sv">
 <head>
 	<meta charset="utf-8">
-	<title>anjh13 - dbwebb kurspaket</title>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+	<title><?php echo $acronym; ?> @ dbwebb.se</title>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,500' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
@@ -39,7 +42,7 @@ $courses = array(
 <body>
 	<div id="container">
 
-		<h1 class="text-primary">anjh13 @ dbwebb.se</h1>
+		<h1><?php echo $acronym; ?> @ dbwebb.se</h1>
 
 		<?php 
 		foreach ($courses as $course => $co): ?>
@@ -48,14 +51,16 @@ $courses = array(
 			$fm = new FileManager();
 			$folders = $fm->folder($co['folder'])->sort()->get(FileManager::$GETFOLDERS);
 			foreach ($folders as $folder): ?>
-				<a type="button" class="btn <?php echo $co['button']; ?> btn-lg btn-block" href="<?php echo $folder; ?>"><?php echo $folder; ?></a>
+				<a type="button" class="btn <?php echo $co['button']; ?> btn-lg btn-block" href="<?php echo $co['folder'].$folder; ?>"><?php echo $folder; ?></a>
 			<?php 
 			endforeach; 
 			if(count($folders) == 0): ?>
-				<p>Här var det tomt. Andreas har förmodligen inte börjat på den här kursen än.</p>
+				<p>Här var det tomt. Andreas har förmodligen inte börjat på den här kursen än. Kom tillbaka lite senare! ;)</p>
 			<?php endif;
 		endforeach; 
 		?>
+
+		<footer><small>Källkoden till den här sidan finns på github: <a href="https://github.com/adde/dbwebb-landingpage">https://github.com/adde/dbwebb-landingpage</a></small></footer>
 		
 	</div>
 </body>
