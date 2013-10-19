@@ -1,0 +1,8 @@
+/*
+General styles
+=======================================
+*/
+
+h1 { font-family: 'Open Sans'; font-size: 56px; font-weight: 700;}
+h2 { font-size: 40px; font-weight: 700;}
+#container {width: 600px; margin: 0 auto;}
