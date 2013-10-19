@@ -12,3 +12,8 @@ Installation
 	$acronym = 'din-egna-akronym';
 
 Kopiera in filerna i roten på din www-mapp på studentserver. Klart!
+
+Hur det fungerar
+----------------
+
+Skannar kursmapparna (htmlphp, oophp, phpmvc, javascript) och skriver ut en länk för varje kursmoment. Om mappen inte finns eller är tom skrivs en liten text ut istället.
