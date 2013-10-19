@@ -24,7 +24,7 @@ require 'src/file-manager.php';
 			$fm = new FileManager();
 			$folders = $fm->folder($co['folder'])->sort()->get(FileManager::$GETFOLDERS);
 			foreach ($folders as $folder): ?>
-				<a type="button" class="btn <?php echo $co['button']; ?> btn-lg btn-block" href="<?php echo $co['folder'].$folder; ?>"><?php echo $folder; ?></a>
+				<a class="btn <?php echo $co['button']; ?> btn-lg btn-block" href="<?php echo $co['folder'].$folder; ?>"><?php echo $folder; ?></a>
 			<?php 
 			endforeach; 
 			if(count($folders) == 0): ?>
