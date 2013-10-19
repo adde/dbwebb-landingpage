@@ -57,7 +57,7 @@ class FileManager
 					{
 						$result[] = $obj;
 					}
-					// Hämtar bara mappar (bortser från bort . och ..)
+					// Hämtar bara mappar (bortser från . och ..)
 					elseif(is_dir($this->_folder.$obj) && $mode == self::$GETFOLDERS && ($obj != '.' && $obj != '..'))
 					{
 						$result[] = $obj;
