@@ -18,10 +18,7 @@ class FileManager
 
 	public function __construct($folder = NULL)
 	{
-		if($folder != NULL) 
-		{
-			$this->_folder = $folder;
-		}
+		$this->_folder = $folder;
 	}
 
 	public function folder($folder)
@@ -51,7 +48,7 @@ class FileManager
 		{
 			if ($handle = opendir($this->_folder)) 
 			{
-				while (false !== ($obj = readdir($handle))) {
+				while (FALSE !== ($obj = readdir($handle))) {
 					// Hämtar bara filer
 					if(!is_dir($this->_folder.$obj) && $mode == self::$GETFILES)
 					{
