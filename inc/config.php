@@ -7,7 +7,7 @@
 // Tvingar IE att använda senaste renderingsmotorn
 header("X-UA-Compatible: IE=edge,chrome=1");
 
-// Definierar akronym (används i titel och rubrik)
+// Definierar akronym/namn (används i titel, rubrik och texter)
 $acronym = 'anjh13';
 
 // Definierar kurserna
